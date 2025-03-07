@@ -15,8 +15,6 @@ Programmet ska:
      * Antalet jämna respektive udda tal  
     * Det näst största talet i inmatningen*/
 
-   
-
 int main(){
 
     std :: string restart; //Variabel som tar in en sträng från användaren, syfte är att kunna starta om programmet när programmet är slut.
