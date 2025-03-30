@@ -28,7 +28,7 @@ struct gamestats{
 
     int pc_easy_loss = 0, pc_normal_loss = 0, pc_hard_loss = 0;
 
-    //tracking the total amount of different games played, including games that ended in a tie.
+    //tracking the total amount of different games played.
 
     int total_games = 0, gameties = 0;
     
@@ -42,9 +42,9 @@ struct gamestats{
 void welcome(); //Displays welcome message.
 void menu(); //Displays the menu.
 void difficulty(); //Displays each difficulty.
-void easy(gamestats &stats); //game on chill mode.
-void normal(gamestats &stats); //game with some chill but fun and quite hard.
-void hard(gamestats &stats); //game with no chill, frustrating and challening, requires you to have tactical thinking.
+void easy(gamestats &stats); //game on chill mode, laughable easy.
+void normal(gamestats &stats); //game with some chill but fun and with more resistance.
+void hard(gamestats &stats); //game with no chill, frustrating and challening, requires more tactical thinking.
 void gameboard(char *spaces); //Displays the board with all its spaces.
 void scoreboard(gamestats &stats);
 void playermove(char *spaces, char player); //letting the player to interact with the board.
@@ -238,14 +238,18 @@ void easy(gamestats &stats){
             gameboard(spaces);//displaying the board with the winning result.
             if(winner == player) {
                 std::cout<<"You won an easy game, congratulations!\n";
+                stats.player_total_wins++;
                 stats.player_easy_wins++;
                 stats.player_score++;
                 stats.pc_easy_loss++;
+                stats.pc_total_loss++;
             }else{
                 std::cout<<"You lost an easy game, that's not ok bro.\n";
+                stats.pc_total_wins++;
                 stats.pc_easy_wins++;
                 stats.pc_score++;
                 stats.player_easy_loss++;
+                stats.player_total_loss++;
             }
             stats.total_games++;
             stats.easy_games++;
@@ -270,14 +274,19 @@ void easy(gamestats &stats){
         if(checkwinner(spaces, winner)){
             if(winner == player) {
                 std::cout<<"You won an easy game, congratulations!\n";
+                stats.player_total_wins++;
                 stats.player_easy_wins++;
                 stats.player_score++;
                 stats.pc_easy_loss++;
+                stats.pc_total_loss++;
             }else{
                 std::cout<<"You lost an easy game, that's not ok bro.\n";
+                stats.pc_total_wins++;
                 stats.pc_easy_wins++;
                 stats.pc_score++;
                 stats.player_easy_loss++;
+                stats.player_total_loss++;
+
             }
             stats.easy_games++;
             stats.total_games++;
@@ -414,14 +423,18 @@ void normal(gamestats &stats){
             gameboard(spaces);//displaying the board with the winning result.
             if(winner == player) {
                 std::cout<<"You won a normal game!, hope you enjoyed it (; \n";
+                stats.player_total_wins++;
                 stats.player_normal_wins++;
                 stats.player_score+=3;
                 stats.pc_normal_loss++;
+                stats.pc_total_loss++;
             }else{
                 std::cout<<"You lost a normal game...maybe next time you get it.\n";
+                stats.pc_total_wins++;
                 stats.pc_normal_wins++;
                 stats.pc_score+=3;
                 stats.player_normal_loss++;
+                stats.player_total_loss++;
             }
             stats.normal_games++;
             stats.total_games++;
@@ -445,14 +458,18 @@ void normal(gamestats &stats){
         if(checkwinner(spaces, winner)){
             if(winner == player) {
                 std::cout<<"You won a normal game!, hope you enjoyed it (; \n";
+                stats.player_total_wins++;
                 stats.player_normal_wins++;
                 stats.player_score+=3;
                 stats.pc_normal_loss++;
+                stats.pc_total_loss++;
             }else{
                 std::cout<<"You lost a normal game...maybe next time you get it.\n";
+                stats.pc_total_wins++;
                 stats.pc_normal_wins++;
                 stats.pc_score+=3;
                 stats.player_normal_loss++;
+                stats.player_total_loss++;
             }
             stats.normal_games++;
             stats.total_games++;
@@ -461,8 +478,8 @@ void normal(gamestats &stats){
         }
         if(checkdraw(spaces)){
             gameboard(spaces);
-            std :: cout <<"\n";
-            std :: cout <<"Game ended in a draw.\n";
+            std::cout <<"\n";
+            std::cout <<"Game ended in a draw.\n";
             stats.normal_games++;
             stats.total_games++;
             stats.gameties++;
@@ -589,14 +606,19 @@ void hard(gamestats &stats){
             gameboard(spaces);//displaying the board with the winning result.
             if(winner == player) {
                 std::cout<<"You won a hard game!, YOU are the legend (; \n";
+                stats.player_total_wins++;
                 stats.player_hard_wins++;
                 stats.player_score+=5;
                 stats.pc_hard_loss++;
+              
             }else{
-                std::cout<<"You lost a normal game...maybe next time you get it.\n";
-                stats.pc_normal_wins++;
-                stats.pc_score+=3;
-                stats.player_normal_loss++;
+                std::cout<<"You lost a Hard game...maybe next time you get it.\n";
+                stats.pc_total_wins++;
+                stats.pc_hard_wins++;
+                stats.pc_score+=5;
+                stats.player_hard_loss++;
+                stats.player_total_loss++;
+              
             }
             stats.hard_games++;
             stats.total_games++;
@@ -605,7 +627,7 @@ void hard(gamestats &stats){
         }
         if(checkdraw(spaces)){ //when there is a draw the loop breaks and its game over.
             gameboard(spaces); //displaying the board with the draw result.
-            std :: cout <<"Game ended in a draw.\n";
+            std::cout <<"Game ended in a draw.\n";
             stats.hard_games++;
             stats.total_games++;
             stats.gameties++;
@@ -620,14 +642,17 @@ void hard(gamestats &stats){
         if(checkwinner(spaces, winner)){
             if(winner == player) {
                 std::cout<<"You won a hard game!, YOU are the legend ():!!!!! \n";
+                stats.player_total_wins++;
                 stats.player_hard_wins++;
                 stats.player_score+=5;
                 stats.pc_hard_loss++;
             }else{
                 std::cout<<"You lost a hard game...maybe this is too hard for you )=.\n";
+                stats.pc_total_wins++;
                 stats.pc_hard_wins++;
                 stats.pc_score+=5;
-                stats.player_normal_loss++;
+                stats.player_hard_loss++;
+                stats.player_total_loss++;
             }
             stats.hard_games++;
             stats.total_games++;
@@ -636,8 +661,8 @@ void hard(gamestats &stats){
         }
         if(checkdraw(spaces)){
             gameboard(spaces);
-            std :: cout <<"\n";
-            std :: cout <<"Game ended in a draw.\n";
+            std::cout<<"\n";
+            std::cout<<"Game ended in a draw.\n";
             stats.hard_games++;
             stats.total_games++;
             stats.gameties++;
@@ -868,8 +893,6 @@ bool checkwinner(char *spaces, char &winner){
     
     }
     
-    
-
 void computermove_easy(char *spaces, char computer, char player){
 //easy level: The computer is only picking random spots on the board, cannot see winning conditions, nor do block it's opponent.
     while(true){ 
@@ -892,7 +915,7 @@ void computermove_easy(char *spaces, char computer, char player){
 }
 
 void computermove_normal(char *spaces, char computer, char player){
-//normal level: The computer has the ability to see if its about to win and make that move, however not programmed to block its opponent on this level.
+//normal level: The computer has the ability to see if its about to win and make that move, however it is not programmed to block its opponent on this level.
 
     for (int i = 0; i < BOARD_SIZE; i++){
         if (spaces[i] == ' '){ //if the cell is empty:
@@ -967,7 +990,7 @@ void computermove_hard(char *spaces, char computer, char player){
         }
 
     }
-    //if the player is not about to win, make the computer to select a cell randomly.
+    //if the player or the computer is not about to win, the computer selects a cell randomly.
     while(true){ 
         int computer_choice; //variable that will store the computers choice.
         computer_choice = rand() % BOARD_SIZE; //generates a random number between 0 and 8.
