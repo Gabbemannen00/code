@@ -1,0 +1,36 @@
+/* Style.css */
+
+/* Nollställ standardmarginaler och padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Lägg till en bakgrundsfärg för hela sidan */
+body {
+  font-family: Arial, sans-serif; /* Sätt en enkel font */
+  background-color: #f0f0f0; /* Ljusgrå bakgrund */
+  color: #333; /* Mörk textfärg för läsbarhet */
+  text-align: center; /* Centrera texten på sidan */
+  padding: 20px;
+}
+
+/* Stil för rubriken (h1) */
+h1 {
+  font-size: 36px; /* Gör rubriken stor */
+  color: #4CAF50; /* Sätt rubrikens färg till grön */
+  margin-bottom: 20px; /* Lägg till ett litet mellanrum under rubriken */
+}
+
+/* Stil för länkar (om du har några på sidan) */
+a {
+  text-decoration: none; /* Ta bort understrykning */
+  color: #007BFF; /* Sätt länken till en blå färg */
+}
+
+a:hover {
+  color: #0056b3; /* Mörkare blå när man hovrar över länken */
+  text-decoration: underline; /* Lägg till understrykning på hover */
+}
+
