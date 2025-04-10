@@ -1,9 +1,9 @@
-#include <iostream> //working with user input such as cout, cin.
-#include <cstdlib> //gives the access to work with random number generation.
-#include <ctime> //Tracking the current time.
-#include <cstring> //gives me access to work with string operations.
-#include <cctype> //In order to convert letters to lower- or uppercase.
-#include <limits> //checking for invalid inputs from the user.
+#include <iostream> 
+#include <cstdlib> 
+#include <ctime> 
+#include <cstring>
+#include <cctype> 
+#include <limits> 
 
 
 const int BOARD_SIZE = 9; //Board size will be used as a global variable so all functions can access it.
