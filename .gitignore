@@ -1,4 +1,58 @@
-build/
+# Systemfiler och cache
+.DS_Store
+Thumbs.db
+
+# IDE-filer
+.vscode/
+*.code-workspace
+.idea/
+
+# Python/MicroPython
+__pycache__/
+*.pyc
+secrets.py
+*.env
+*.uf2
+*.bin
+*.hex
+
+# TypeScript
+node_modules/
+dist/
 *.log
+
+# Go
 *.exe
-file.txt
+*.out
+*.test
+coverage.txt
+
+# Rust
+/target/
+Cargo.lock
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+out/
+
+# C/C++
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+
+# Node.js
+node_modules/
+.env
+
+# HTML/CSS
+*.map
+*.tmp
+
+# Byggartefakter
+build/
+
