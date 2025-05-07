@@ -1,0 +1,15 @@
+/Users/gabrielcarlsson/projects/code_repo/Csharp/bin/Debug/net9.0/CSharp
+/Users/gabrielcarlsson/projects/code_repo/Csharp/bin/Debug/net9.0/CSharp.deps.json
+/Users/gabrielcarlsson/projects/code_repo/Csharp/bin/Debug/net9.0/CSharp.runtimeconfig.json
+/Users/gabrielcarlsson/projects/code_repo/Csharp/bin/Debug/net9.0/CSharp.dll
+/Users/gabrielcarlsson/projects/code_repo/Csharp/bin/Debug/net9.0/CSharp.pdb
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/CSharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/CSharp.AssemblyInfoInputs.cache
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/CSharp.AssemblyInfo.cs
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/CSharp.csproj.CoreCompileInputs.cache
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/CSharp.sourcelink.json
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/CSharp.dll
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/refint/CSharp.dll
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/CSharp.pdb
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/CSharp.genruntimeconfig.cache
+/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/Debug/net9.0/ref/CSharp.dll

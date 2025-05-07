@@ -34,7 +34,7 @@ int main() {
                 break; // Stop if the user enters 0
             }
 
-            if (num < 0) {
+            if (num < 0) { // So the use dont type negative numbers.
                 std::cout << "Error! Negative numbers are not allowed. Try again.\n";
                 continue;
             }

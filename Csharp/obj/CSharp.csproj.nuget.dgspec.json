@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gabrielcarlsson/projects/code_repo/Csharp/HelloWorld.csproj": {}
+    "/Users/gabrielcarlsson/projects/code_repo/Csharp/CSharp.csproj": {}
   },
   "projects": {
-    "/Users/gabrielcarlsson/projects/code_repo/Csharp/HelloWorld.csproj": {
+    "/Users/gabrielcarlsson/projects/code_repo/Csharp/CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gabrielcarlsson/projects/code_repo/Csharp/HelloWorld.csproj",
-        "projectName": "HelloWorld",
-        "projectPath": "/Users/gabrielcarlsson/projects/code_repo/Csharp/HelloWorld.csproj",
+        "projectUniqueName": "/Users/gabrielcarlsson/projects/code_repo/Csharp/CSharp.csproj",
+        "projectName": "CSharp",
+        "projectPath": "/Users/gabrielcarlsson/projects/code_repo/Csharp/CSharp.csproj",
         "packagesPath": "/Users/gabrielcarlsson/.nuget/packages/",
         "outputPath": "/Users/gabrielcarlsson/projects/code_repo/Csharp/obj/",
         "projectStyle": "PackageReference",
